@@ -8,6 +8,26 @@ import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 import Box from '@material-ui/core/Box';
 import Container from '@material-ui/core/Container';
 import Slide from '@material-ui/core/Slide';
+import { Theme, createStyles, makeStyles } from '@material-ui/core/styles';
+import GridList from '@material-ui/core/GridList';
+import GridListTile from '@material-ui/core/GridListTile';
+import tileData from './tileData';
+
+const useStyles = makeStyles((theme: Theme) =>
+  createStyles({
+    root: {
+      display: 'flex',
+      flexWrap: 'wrap',
+      justifyContent: 'space-around',
+      overflow: 'hidden',
+      backgroundColor: theme.palette.background.paper,
+    },
+    gridList: {
+      // width: 500,
+      // height: 450,
+    },
+  }),
+);
 
 interface Props {
   children: React.ReactElement;
@@ -29,6 +49,9 @@ function HideOnScroll(props: Props) {
 
 // function App(props: Props) {
 function App() {
+
+  const classes = useStyles();
+
   return (
     <div className="App">
       {/*<header className="App-header">*/}
@@ -49,6 +72,14 @@ function App() {
         </HideOnScroll>
         <Toolbar />
         <Container>
+
+          <GridList cellHeight={160} className={classes.gridList} cols={3}>
+            {tileData.map((tile) => (
+              <GridListTile key={tile.img} cols={tile.cols || 1}>
+                <img src={tile.img} alt={tile.title} />
+              </GridListTile>
+            ))}
+          </GridList>
 
         </Container>
       </React.Fragment>
