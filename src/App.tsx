@@ -1,4 +1,7 @@
 import React from 'react';
+import {
+  BrowserRouter as Router, Link,
+} from 'react-router-dom';
 import './App.css';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -54,6 +57,7 @@ function App() {
 
   return (
     <div className="App">
+      <Router>
       {/*<header className="App-header">*/}
       {/*  <p>*/}
       {/*    Hello*/}
@@ -62,15 +66,44 @@ function App() {
 
       <React.Fragment>
         <CssBaseline />
+
         {/*<HideOnScroll {...props}>*/}
         <HideOnScroll>
           <AppBar style={{ background: '#ffffff', boxShadow: 'none', borderBottom: '1px solid #999' }}>
             <Toolbar>
-              <Typography className="logo" variant="h6">ThePlatform</Typography>
+
+              <div className="nav-links-left">
+                <Link to="/">
+                  <Typography className="logo" variant="h6">
+                    ThePlatform
+                  </Typography>
+                </Link>
+              </div>
+
+              <div className="nav-links-right">
+                <Link to="/">
+                  <Typography>
+                    Gallery
+                  </Typography>
+                </Link>
+                <Link to="/">
+                  <Typography>
+                    Magazine
+                  </Typography>
+                </Link>
+                <Link to="/">
+                  <Typography>
+                    Timeline
+                  </Typography>
+                </Link>
+              </div>
+
             </Toolbar>
           </AppBar>
         </HideOnScroll>
+
         <Toolbar />
+
         <Container>
 
           <GridList cellHeight={160} className={classes.gridList} cols={3}>
@@ -84,6 +117,7 @@ function App() {
         </Container>
       </React.Fragment>
 
+      </Router>
     </div>
   );
 }
