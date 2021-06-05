@@ -45,7 +45,7 @@ export default function GalleryPage(): JSX.Element {
             columnClassName="my-masonry-grid_column"
           >
               {tileData.map((tile) => (
-                <div key={tile.img} className="image-item">
+                <div key={tile.title} className="image-item">
                   <img src={tile.img} alt={tile.title} />
                 </div>
               ))}
