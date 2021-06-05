@@ -38,6 +38,9 @@ export default function GalleryPage(): JSX.Element {
   return (
     <section className="container">
       <div>
+        <Typography variant="subtitle1" gutterBottom>
+          Gallery (resize page)
+        </Typography>
         <Container maxWidth="sm">
           {/*<GridList cellHeight={160} className={classes.gridList} cols={3}>*/}
           {/*  {tileData.map((tile) => (*/}
