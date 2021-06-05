@@ -70,32 +70,32 @@ function App() {
         {/*<HideOnScroll {...props}>*/}
         <HideOnScroll>
           <AppBar style={{ background: '#ffffff', boxShadow: 'none', borderBottom: '1px solid #999' }}>
-            <Toolbar>
+            <Toolbar className="toolbar">
 
               <div className="nav-links-left">
-                <Link to="/">
-                  <Typography className="logo" variant="h6">
+                <Typography variant="h6">
+                  <Link className="logo" to="/">
                     ThePlatform
-                  </Typography>
-                </Link>
+                  </Link>
+                </Typography>
               </div>
 
               <div className="nav-links-right">
-                <Link to="/">
-                  <Typography>
+                <Typography>
+                  <Link className="navItem__right" to="/">
                     Gallery
-                  </Typography>
-                </Link>
-                <Link to="/">
-                  <Typography>
+                  </Link>
+                </Typography>
+                <Typography>
+                  <Link className="navItem__right" to="/">
                     Magazine
+                  </Link>
                   </Typography>
-                </Link>
-                <Link to="/">
-                  <Typography>
+                <Typography>
+                  <Link className="navItem__right" to="/">
                     Timeline
-                  </Typography>
-                </Link>
+                 </Link>
+                </Typography>
               </div>
 
             </Toolbar>
