@@ -15,22 +15,11 @@ import { Theme, createStyles, makeStyles } from '@material-ui/core/styles';
 import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
 import tileData from './tileData';
+import TimelinePage from "./pages/TimelinePage";
+import MagazinePage from "./pages/MagazinePage";
+import GalleryPage from "./pages/GalleryPage";
+import {Redirect, Route, Switch} from "react-router-dom";
 
-const useStyles = makeStyles((theme: Theme) =>
-  createStyles({
-    root: {
-      display: 'flex',
-      flexWrap: 'wrap',
-      justifyContent: 'space-around',
-      overflow: 'hidden',
-      backgroundColor: theme.palette.background.paper,
-    },
-    gridList: {
-      // width: 500,
-      // height: 450,
-    },
-  }),
-);
 
 interface Props {
   children: React.ReactElement;
@@ -53,8 +42,6 @@ function HideOnScroll(props: Props) {
 // function App(props: Props) {
 function App() {
 
-  const classes = useStyles();
-
   return (
     <div className="App">
       <Router>
@@ -65,7 +52,6 @@ function App() {
       {/*</header>*/}
 
       <React.Fragment>
-        <CssBaseline />
 
         {/*<HideOnScroll {...props}>*/}
         <HideOnScroll>
@@ -82,17 +68,17 @@ function App() {
 
               <div className="nav-links-right">
                 <Typography>
-                  <Link className="navItem__right" to="/">
+                  <Link className="navItem__right" to="/gallery">
                     Gallery
                   </Link>
                 </Typography>
                 <Typography>
-                  <Link className="navItem__right" to="/">
+                  <Link className="navItem__right" to="/magazine">
                     Magazine
                   </Link>
                   </Typography>
                 <Typography>
-                  <Link className="navItem__right" to="/">
+                  <Link className="navItem__right" to="/timeline">
                     Timeline
                  </Link>
                 </Typography>
@@ -106,13 +92,12 @@ function App() {
 
         <Container>
 
-          <GridList cellHeight={160} className={classes.gridList} cols={3}>
-            {tileData.map((tile) => (
-              <GridListTile key={tile.img} cols={tile.cols || 1}>
-                <img src={tile.img} alt={tile.title} />
-              </GridListTile>
-            ))}
-          </GridList>
+          <Switch>
+            <Route exact path="/gallery" component={GalleryPage}/>
+            <Route exact path="/magazine" component={MagazinePage}/>
+            <Route exact path="/timeline" component={TimelinePage}/>
+            <Redirect to="/"/>
+          </Switch>
 
         </Container>
       </React.Fragment>

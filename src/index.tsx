@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Web3ReactProvider } from '@web3-react/core';
 import { Web3Provider } from '@ethersproject/providers';
+import CssBaseline from "@material-ui/core/CssBaseline";
 
 const getLibrary = (provider: any): Web3Provider => {
   const library = new Web3Provider(provider)
@@ -15,7 +16,8 @@ const getLibrary = (provider: any): Web3Provider => {
 ReactDOM.render(
   <React.StrictMode>
     <Web3ReactProvider getLibrary={getLibrary}>
-    <App />
+      <CssBaseline />
+      <App />
     </Web3ReactProvider>
   </React.StrictMode>,
   document.getElementById('root')
