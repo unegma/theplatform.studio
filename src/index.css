@@ -16,3 +16,7 @@ code {
   color: #1d1d1d;
   text-decoration: none;
 }
+
+.image-item {
+  background: none !important;
+}

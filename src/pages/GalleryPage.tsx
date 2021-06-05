@@ -7,6 +7,7 @@ import tileData from "../tileData";
 import GridListTile from "@material-ui/core/GridListTile";
 import GridList from "@material-ui/core/GridList";
 import {createStyles, makeStyles, Theme} from "@material-ui/core/styles";
+import Masonry from 'react-masonry-css';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -31,13 +32,24 @@ export default function GalleryPage(): JSX.Element {
     <section className="container">
       <div>
         <Container maxWidth="sm">
-          <GridList cellHeight={160} className={classes.gridList} cols={3}>
-            {tileData.map((tile) => (
-              <GridListTile key={tile.img} cols={tile.cols || 1}>
-                <img src={tile.img} alt={tile.title} />
-              </GridListTile>
-            ))}
-          </GridList>
+          {/*<GridList cellHeight={160} className={classes.gridList} cols={3}>*/}
+          {/*  {tileData.map((tile) => (*/}
+          {/*    <GridListTile key={tile.img} cols={tile.cols || 1}>*/}
+          {/*      <img src={tile.img} alt={tile.title} />*/}
+          {/*    </GridListTile>*/}
+          {/*  ))}*/}
+          {/*</GridList>*/}
+          <Masonry
+            breakpointCols={3}
+            className="my-masonry-grid"
+            columnClassName="my-masonry-grid_column"
+          >
+              {tileData.map((tile) => (
+                <div key={tile.img} className="image-item">
+                  <img src={tile.img} alt={tile.title} />
+                </div>
+              ))}
+          </Masonry>
         </Container>
       </div>
     </section>
