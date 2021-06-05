@@ -25,6 +25,11 @@
   flex-direction: row;
 }
 
+.nav-links-home {
+  display: flex;
+  flex-direction: column;
+}
+
 .navItem__right {
   color: #1d1d1d;
   text-decoration: none;
@@ -48,3 +53,4 @@
   /*background: grey;*/
   margin-bottom: 30px;
 }
+

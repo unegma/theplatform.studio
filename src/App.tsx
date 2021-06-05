@@ -18,6 +18,7 @@ import tileData from './tileData';
 import TimelinePage from "./pages/TimelinePage";
 import MagazinePage from "./pages/MagazinePage";
 import GalleryPage from "./pages/GalleryPage";
+import HomePage from "./pages/HomePage";
 import {Redirect, Route, Switch} from "react-router-dom";
 
 
@@ -93,6 +94,7 @@ function App() {
         <Container>
 
           <Switch>
+            <Route exact path="/" component={HomePage}/>
             <Route exact path="/gallery" component={GalleryPage}/>
             <Route exact path="/magazine" component={MagazinePage}/>
             <Route exact path="/timeline" component={TimelinePage}/>
