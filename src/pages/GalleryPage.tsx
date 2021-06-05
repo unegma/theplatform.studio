@@ -25,6 +25,13 @@ const useStyles = makeStyles((theme: Theme) =>
   }),
 );
 
+const breakpointColumnsObj = {
+  default: 4,
+  1100: 3,
+  700: 2,
+  500: 1
+};
+
 export default function GalleryPage(): JSX.Element {
   const classes = useStyles();
 
@@ -39,8 +46,11 @@ export default function GalleryPage(): JSX.Element {
           {/*    </GridListTile>*/}
           {/*  ))}*/}
           {/*</GridList>*/}
+
+
+
           <Masonry
-            breakpointCols={3}
+            breakpointCols={breakpointColumnsObj}
             className="my-masonry-grid"
             columnClassName="my-masonry-grid_column"
           >
