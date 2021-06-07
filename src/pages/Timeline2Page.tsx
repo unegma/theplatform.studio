@@ -43,7 +43,7 @@ export default function Timeline2Page(): JSX.Element {
   return (
     <section className="container">
       <Typography variant="subtitle1" gutterBottom>
-        Timeline (scroll left and right)
+        Timeline2
       </Typography>
       <div>
         <Container maxWidth="sm">
@@ -68,8 +68,8 @@ export default function Timeline2Page(): JSX.Element {
             {/*  ))}*/}
             {/*</GridList>*/}
 
-            <div style={{ width: "500px", height: "400px" }}>
-              <Chrono mode="VERTICAL_ALTERNATING" scrollable={{scrollbar: true}} items={items} />
+            <div style={{ width: "100%", height: "90vh" }}>
+              <Chrono mode="HORIZONTAL" scrollable={{scrollbar: true}} items={items} />
             </div>
 
           </div>

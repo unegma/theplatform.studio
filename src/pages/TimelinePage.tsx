@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme: Theme) =>
       flexWrap: 'wrap',
       justifyContent: 'space-around',
       overflow: 'hidden',
-      backgroundColor: theme.palette.background.paper,
+      // backgroundColor: theme.palette.background.paper,
     },
     gridList: {
       flexWrap: 'nowrap',
@@ -43,10 +43,10 @@ export default function TimelinePage(): JSX.Element {
   return (
     <section className="container">
       <Typography variant="subtitle1" gutterBottom>
-        Timeline (scroll left and right)
+        Timeline Example
       </Typography>
       <div>
-        <Container maxWidth="sm">
+        <Container >
           <div className={classes.root}>
             {/*<GridList className={classes.gridList} cols={2.5}>*/}
             {/*  {tileData.map((tile) => (*/}
@@ -68,7 +68,7 @@ export default function TimelinePage(): JSX.Element {
             {/*  ))}*/}
             {/*</GridList>*/}
 
-            <div style={{ width: "500px", height: "400px" }}>
+            <div style={{ width: "100%", height: "80vh" }}>
               <Chrono mode="VERTICAL_ALTERNATING" scrollable={{scrollbar: true}} items={items} />
             </div>
 
