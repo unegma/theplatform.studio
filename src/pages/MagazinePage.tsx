@@ -35,6 +35,10 @@ const useStyles = makeStyles((theme: Theme) =>
   }),
 );
 
+/**
+ * Todo  Can we rename the Magazine format “artist Catalogue’ and then do another format for the Magazine where you only see the picture first and then you can go deeper. But at first it’s all about the ‘NFT’
+ * @constructor
+ */
 export default function MagazinePage(): JSX.Element {
 
   const classes = useStyles();
