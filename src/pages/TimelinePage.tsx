@@ -69,7 +69,7 @@ export default function TimelinePage(): JSX.Element {
             {/*</GridList>*/}
 
             <div style={{ width: "500px", height: "400px" }}>
-              <Chrono mode="HORIZONTAL" scrollable items={items} />
+              <Chrono mode="VERTICAL_ALTERNATING" scrollable={{scrollbar: true}} items={items} />
             </div>
 
           </div>

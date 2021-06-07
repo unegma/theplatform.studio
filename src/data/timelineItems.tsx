@@ -8,7 +8,7 @@ const timelineItems: Array<TimelineItemModel> = [{
   media: {
     type: "IMAGE",
     source: {
-      url: "http://someurl/image.jpg"
+      url: "https://picsum.photos/150/200"
     }
   }
 },{
@@ -19,7 +19,7 @@ const timelineItems: Array<TimelineItemModel> = [{
   media: {
     type: "IMAGE",
     source: {
-      url: "http://someurl/image.jpg"
+      url: "https://picsum.photos/150/200"
     }
   }
 },{
@@ -30,7 +30,7 @@ const timelineItems: Array<TimelineItemModel> = [{
   media: {
     type: "IMAGE",
     source: {
-      url: "http://someurl/image.jpg"
+      url: "https://picsum.photos/150/200"
     }
   }
 }];
