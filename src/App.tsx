@@ -14,7 +14,6 @@ import Slide from '@material-ui/core/Slide';
 import { Theme, createStyles, makeStyles } from '@material-ui/core/styles';
 import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
-import tileData from './tileData';
 import TimelinePage from "./pages/TimelinePage";
 import MagazinePage from "./pages/MagazinePage";
 import GalleryPage from "./pages/GalleryPage";

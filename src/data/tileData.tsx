@@ -1,6 +1,4 @@
-import image from 'path/to/image.jpg';
-
-const tileData = [
+const tileData: Array<any> = [
   {
     img: 'https://picsum.photos/300/200',
     title: 'Image0',

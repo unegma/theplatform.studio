@@ -3,7 +3,7 @@ import Typography from "@material-ui/core/Typography";
 import {Container, ListItemText} from "@material-ui/core";
 import {Link} from "react-router-dom";
 import ListItem from "@material-ui/core/ListItem";
-import tileData from "../tileData";
+import tileData from "../data/tileData";
 import GridListTile from "@material-ui/core/GridListTile";
 import GridList from "@material-ui/core/GridList";
 import {createStyles, makeStyles, Theme} from "@material-ui/core/styles";

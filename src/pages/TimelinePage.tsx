@@ -7,7 +7,8 @@ import GridListTile from '@material-ui/core/GridListTile';
 import GridListTileBar from '@material-ui/core/GridListTileBar';
 import IconButton from '@material-ui/core/IconButton';
 // import StarBorderIcon from '@material-ui/icons/StarBorder';
-import tileData from '../tileData';
+import { Chrono } from "react-chrono";
+import timelineItems from "../data/timelineItems";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -37,6 +38,7 @@ export default function TimelinePage(): JSX.Element {
 
   const classes = useStyles();
 
+  const items = timelineItems;
 
   return (
     <section className="container">
@@ -46,25 +48,30 @@ export default function TimelinePage(): JSX.Element {
       <div>
         <Container maxWidth="sm">
           <div className={classes.root}>
-            <GridList className={classes.gridList} cols={2.5}>
-              {tileData.map((tile) => (
-                <GridListTile key={tile.img}>
-                  <img src={tile.img} alt={tile.title} />
-                  <GridListTileBar
-                    title={tile.title}
-                    classes={{
-                      root: classes.titleBar,
-                      title: classes.title,
-                    }}
-                    actionIcon={
-                      <IconButton aria-label={`star ${tile.title}`}>
-                        {/*<StarBorderIcon className={classes.title} />*/}
-                      </IconButton>
-                    }
-                  />
-                </GridListTile>
-              ))}
-            </GridList>
+            {/*<GridList className={classes.gridList} cols={2.5}>*/}
+            {/*  {tileData.map((tile) => (*/}
+            {/*    <GridListTile key={tile.img}>*/}
+            {/*      <img src={tile.img} alt={tile.title} />*/}
+            {/*      <GridListTileBar*/}
+            {/*        title={tile.title}*/}
+            {/*        classes={{*/}
+            {/*          root: classes.titleBar,*/}
+            {/*          title: classes.title,*/}
+            {/*        }}*/}
+            {/*        actionIcon={*/}
+            {/*          <IconButton aria-label={`star ${tile.title}`}>*/}
+            {/*            /!*<StarBorderIcon className={classes.title} />*!/*/}
+            {/*          </IconButton>*/}
+            {/*        }*/}
+            {/*      />*/}
+            {/*    </GridListTile>*/}
+            {/*  ))}*/}
+            {/*</GridList>*/}
+
+            <div style={{ width: "500px", height: "400px" }}>
+              <Chrono mode="HORIZONTAL" scrollable items={items} />
+            </div>
+
           </div>
         </Container>
       </div>
