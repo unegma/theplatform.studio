@@ -25,6 +25,11 @@ export default function HomePage(): JSX.Element {
             Timeline
           </Link>
         </Typography>
+        <Typography>
+          <Link className="navItem__right" to="/timeline2">
+            Timeline2
+          </Link>
+        </Typography>
       </div>
     </section>
   );

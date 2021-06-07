@@ -19,6 +19,7 @@ import MagazinePage from "./pages/MagazinePage";
 import GalleryPage from "./pages/GalleryPage";
 import HomePage from "./pages/HomePage";
 import {Redirect, Route, Switch} from "react-router-dom";
+import Timeline2Page from "./pages/Timeline2Page";
 
 
 interface Props {
@@ -67,21 +68,21 @@ function App() {
               </div>
 
               <div className="nav-links-right">
-                <Typography>
-                  <Link className="navItem__right" to="/gallery">
-                    Gallery
-                  </Link>
-                </Typography>
-                <Typography>
-                  <Link className="navItem__right" to="/magazine">
-                    Magazine
-                  </Link>
-                  </Typography>
-                <Typography>
-                  <Link className="navItem__right" to="/timeline">
-                    Timeline
-                 </Link>
-                </Typography>
+                {/*<Typography>*/}
+                {/*  <Link className="navItem__right" to="/gallery">*/}
+                {/*    Gallery*/}
+                {/*  </Link>*/}
+                {/*</Typography>*/}
+                {/*<Typography>*/}
+                {/*  <Link className="navItem__right" to="/magazine">*/}
+                {/*    Magazine*/}
+                {/*  </Link>*/}
+                {/*  </Typography>*/}
+                {/*<Typography>*/}
+                {/*  <Link className="navItem__right" to="/timeline">*/}
+                {/*    Timeline*/}
+                {/* </Link>*/}
+                {/*</Typography>*/}
               </div>
 
             </Toolbar>
@@ -97,6 +98,7 @@ function App() {
             <Route exact path="/gallery" component={GalleryPage}/>
             <Route exact path="/magazine" component={MagazinePage}/>
             <Route exact path="/timeline" component={TimelinePage}/>
+            <Route exact path="/timeline2" component={Timeline2Page}/>
             <Redirect to="/"/>
           </Switch>
 
