@@ -1,6 +1,6 @@
-import React, {useCallback, useState} from 'react';
+import React from 'react';
 import Typography from "@material-ui/core/Typography";
-import {Container, ListItemText} from "@material-ui/core";
+import {Container} from "@material-ui/core";
 
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
