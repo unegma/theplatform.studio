@@ -1,14 +1,15 @@
-import React, {useCallback, useState} from 'react';
+import React from 'react';
 import Typography from "@material-ui/core/Typography";
-import {Container, ListItemText} from "@material-ui/core";
-import {
-  BrowserRouter as Router, Link,
-} from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import dotenv from 'dotenv';
+import Account from "../components/Account";
+dotenv.config();
 
 export default function HomePage(): JSX.Element {
 
   return (
     <section className="container">
+      <Account/>
       <div className="nav-links-home">
         <Typography>
           <Link className="navItem__right" to="/gallery">

@@ -15,7 +15,7 @@ import GalleryPage from "./pages/GalleryPage";
 import HomePage from "./pages/HomePage";
 import {Redirect, Route, Switch} from "react-router-dom";
 import Timeline2Page from "./pages/Timeline2Page";
-
+import WebThreeSection from "./components/WebThreeSection";
 
 interface Props {
   children: React.ReactElement;
@@ -53,11 +53,7 @@ function App() {
               </div>
 
               <div className="nav-links-right">
-                {/*<Typography>*/}
-                {/*  <Link className="navItem__right" to="/gallery">*/}
-                {/*    Gallery*/}
-                {/*  </Link>*/}
-                {/*</Typography>*/}
+                <WebThreeSection/>
               </div>
 
             </Toolbar>
