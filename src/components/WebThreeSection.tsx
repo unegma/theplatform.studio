@@ -9,7 +9,6 @@ import {
 } from "@web3-react/injected-connector";
 import {UserRejectedRequestError as UserRejectedRequestErrorWalletConnect} from "@web3-react/walletconnect-connector";
 import {Spinner} from './Spinner';
-import Account from "./Account";
 
 enum ConnectorNames {
   Injected = 'Injected',
@@ -59,7 +58,6 @@ export default function WebThreeSection() {
 
   return (
     <>
-      {/*<Account/>*/}
       <div
         style={{
           marginTop: '1rem',

@@ -37,45 +37,42 @@ function App() {
   return (
     <div className="App">
       <Router>
+        <React.Fragment>
 
-      <React.Fragment>
+          <HideOnScroll>
+            <AppBar style={{ background: '#ffffff', boxShadow: 'none', borderBottom: '1px solid #999' }}>
+              <Toolbar className="toolbar">
 
-        <HideOnScroll>
-          <AppBar style={{ background: '#ffffff', boxShadow: 'none', borderBottom: '1px solid #999' }}>
-            <Toolbar className="toolbar">
+                <div className="nav-links-left">
+                  <Typography variant="h6">
+                    <Link className="logo" to="/">
+                      ThePlatform
+                    </Link>
+                  </Typography>
+                </div>
 
-              <div className="nav-links-left">
-                <Typography variant="h6">
-                  <Link className="logo" to="/">
-                    ThePlatform
-                  </Link>
-                </Typography>
-              </div>
+                <div className="nav-links-right">
+                  <WebThreeSection/>
+                </div>
 
-              <div className="nav-links-right">
-                <WebThreeSection/>
-              </div>
+              </Toolbar>
+            </AppBar>
+          </HideOnScroll>
 
-            </Toolbar>
-          </AppBar>
-        </HideOnScroll>
+          <Toolbar />
 
-        <Toolbar />
+          <Container>
+            <Switch>
+              <Route exact path="/" component={HomePage}/>
+              <Route exact path="/gallery" component={GalleryPage}/>
+              <Route exact path="/magazine" component={MagazinePage}/>
+              <Route exact path="/timeline" component={TimelinePage}/>
+              <Route exact path="/timeline2" component={Timeline2Page}/>
+              <Redirect to="/"/>
+            </Switch>
+          </Container>
 
-        <Container>
-
-          <Switch>
-            <Route exact path="/" component={HomePage}/>
-            <Route exact path="/gallery" component={GalleryPage}/>
-            <Route exact path="/magazine" component={MagazinePage}/>
-            <Route exact path="/timeline" component={TimelinePage}/>
-            <Route exact path="/timeline2" component={Timeline2Page}/>
-            <Redirect to="/"/>
-          </Switch>
-
-        </Container>
-      </React.Fragment>
-
+        </React.Fragment>
       </Router>
     </div>
   );
