@@ -67,7 +67,7 @@ function App() {
               <Route exact path="/gallery" component={GalleryPage}/>
               <Route exact path="/magazine" component={MagazinePage}/>
               <Route exact path="/timeline" component={TimelinePage}/>
-              <Route exact path="/timeline2" component={Timeline2Page}/>
+              {/*<Route exact path="/timeline2" component={Timeline2Page}/>*/}
               <Redirect to="/"/>
             </Switch>
           </Container>
