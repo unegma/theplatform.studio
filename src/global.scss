@@ -1,0 +1,39 @@
+// palette
+$main-background-color: rgb(232, 236, 236);
+$secondary-background-color: #ecd8bf;
+$main-color: #023c40;
+$secondary-color: #683d00;
+
+* {
+  padding: 0;
+  margin:0;
+  box-sizing: border-box;
+  background-color: $main-background-color;
+}
+
+// position
+@mixin column-centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+@mixin column-start {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+@mixin row-centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin row-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
