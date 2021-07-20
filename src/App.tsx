@@ -1,20 +1,17 @@
 import React from 'react';
 import {
-  BrowserRouter as Router, Link,
+  BrowserRouter as Router
 } from 'react-router-dom';
 // import './App.css';
 // import './global.scss';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
+// import AppBar from '@material-ui/core/AppBar';
+// import Toolbar from '@material-ui/core/Toolbar';
+// import Typography from '@material-ui/core/Typography';
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 // import Container from '@material-ui/core/Container';
 import Slide from '@material-ui/core/Slide';
-// import TimelinePage from "./pages/TimelinePage";
-import MagazinePage from "./pages/MagazinePage";
-import GalleryPage from "./pages/GalleryPage";
-import HomePage from "./pages/HomePage";
-import {Redirect, Route, Switch} from "react-router-dom";
+import HomePage from './pages/HomePage';
+import {Redirect, Route, Switch} from 'react-router-dom';
 import TimelinePage from './pages/TimelinePage/TimelinePage';
 
 interface Props {
@@ -33,7 +30,6 @@ function HideOnScroll(props: Props) {
 }
 
 function App() {
-
   return (
     <Router>
       <div style={{minHeight: '100vh'}}>
@@ -56,11 +52,11 @@ function App() {
         <Toolbar /> */}
         <div style={{ backgroundColor: 'palevioletred', width: '100%', height: 20 }}>1234546</div>
         {/* <Container> */}
-          <Switch>
-            <Route path="/timeline" component={TimelinePage} />
-            <Route exact path="/" component={HomePage}/>
-            <Redirect to="/"/>
-          </Switch>
+        <Switch>
+          <Route path="/timeline" component={TimelinePage} />
+          <Route exact path="/" component={HomePage}/>
+          <Redirect to="/"/>
+        </Switch>
         {/* </Container> */}
       </div>
     </Router>
