@@ -8,7 +8,7 @@ $secondary-color: #683d00;
   padding: 0;
   margin:0;
   box-sizing: border-box;
-  background-color: $main-background-color;
+  // background-color: $main-background-color;
 }
 
 // position
@@ -23,6 +23,13 @@ $secondary-color: #683d00;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
+  flex-direction: column;
+}
+
+@mixin column-end {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
   flex-direction: column;
 }
 
