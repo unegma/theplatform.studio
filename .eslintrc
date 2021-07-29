@@ -14,7 +14,7 @@
       "jsx": true
     },
     "ecmaVersion": 12,
-    "sourceType": "module",
+    "sourceType": "module"
   },
   "plugins": [
     "react",
@@ -35,8 +35,9 @@
         "max": 1
       }
     ],
-    "no-console": "warn"
-  },
+    "no-console": "warn",
+    "@typescript-eslint/ban-ts-comment": "off"
+  }
   // "overrides": [
   //   {
   //     "files": [
