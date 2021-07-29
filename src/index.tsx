@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
+import './global.scss'
 import reportWebVitals from './reportWebVitals';
 import { Web3ReactProvider } from '@web3-react/core';
 import { Web3Provider } from '@ethersproject/providers';
 import CssBaseline from "@material-ui/core/CssBaseline";
+// import CssBaseline from '@material-ui/core/CssBaseline';
 import dotenv from 'dotenv'; // todo don't seem to need this in each component, but check this
 dotenv.config();
 
@@ -22,7 +23,7 @@ ReactDOM.render(
       <App />
     </Web3ReactProvider>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById('root'),
 );
 
 // If you want to start measuring performance in your app, pass a function

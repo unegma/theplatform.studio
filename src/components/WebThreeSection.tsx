@@ -55,7 +55,6 @@ export default function WebThreeSection() {
   // handle logic to connect in reaction to certain events on the injected ethereum provider, if it exists
   useInactiveListener(!triedEager || !!activatingConnector)
 
-
   return (
     <>
       <div
@@ -156,7 +155,7 @@ export default function WebThreeSection() {
               cursor: 'pointer'
             }}
             onClick={() => {
-              ;(connector as any).close()
+              (connector as any).close()
             }}
           >
             Deactivate (WC)

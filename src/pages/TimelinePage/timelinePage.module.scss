@@ -1,0 +1,77 @@
+@use '../../global.scss' as position;
+@use '../../global.scss' as color;
+
+.wrapper {
+  @include position.column-start;
+  padding: 0 50px;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+}
+
+.midLine {
+  position: absolute;
+  left: 50%;
+  background-color: grey;
+  width: 4px;
+  height: 100%;
+}
+
+.cardWrapper {
+  width: 100%;
+  @include position.column-start;
+  position: relative;
+}
+
+.card {
+  width: 45%;
+  background-color: burlywood;
+  border-radius: 5px;
+  padding: 10px;
+  @include position.column-start;
+
+  &.left {
+    align-self: flex-start; 
+  }
+
+  &.right {
+    align-self: flex-end; 
+  }
+}
+
+.cardLine {
+  position: absolute;
+  width: calc(5% - 4px);
+  height: 4px;
+  background-color: burlywood;
+
+  &.left {
+    right: calc(50% + 4px);
+    top: calc(50% - 4px);
+  }
+
+  &.right {
+    left: calc(50% + 4px);
+    top: calc(50% - 4px)
+  }
+}
+
+.dot {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: burlywood;
+
+  &.left {
+    right: calc(50% - 10px);
+    top: calc(50% - 10px)
+  }
+
+  &.right {
+    left: calc(50% - 10px);
+    top: calc(50% - 10px)
+  }
+}
