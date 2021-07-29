@@ -13,6 +13,7 @@ import Slide from '@material-ui/core/Slide';
 import HomePage from './pages/HomePage';
 import {Redirect, Route, Switch} from 'react-router-dom';
 import TimelinePage from './pages/TimelinePage/TimelinePage';
+import WebThreeSection from "./components/WebThreeSection";
 
 interface Props {
   children: React.ReactElement;
@@ -43,8 +44,13 @@ function App() {
                     ThePlatform
                   </Link>
                 </Typography>
+              </div>*/}
+
+              <div className="nav-links-right">
+                <WebThreeSection/>
               </div>
 
+        {/*
             </Toolbar>
           </AppBar>
         </HideOnScroll>
